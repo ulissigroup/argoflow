@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ulissigroup/argoflow
+    repoURL: git@github.com:ulissigroup/laikapack_dex.git
     targetRevision: HEAD
-    path: kubeflow/common/dex-istio
+    path: dex-istio
     kustomize:
       version: v4.0.5
   destination:
