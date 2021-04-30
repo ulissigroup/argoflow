@@ -4,4 +4,3 @@ metadata:
   name: oidc-authservice-parameters
 data:
   OIDC_PROVIDER: https://laikapack-head.cheme.cmu.edu/dex
-kind: ConfigMap
