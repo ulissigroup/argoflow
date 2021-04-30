@@ -4,8 +4,8 @@ kind: Kustomization
 resources:
 - github.com/kubeflow/manifests/common/oidc-authservice/base
 
-#patchesStrategicMerge:
-#- configmap-patch.yaml
+patchesStrategicMerge:
+- configmap-patch.yaml
 
 images:
 - name: gcr.io/arrikto/kubeflow/oidc-authservice
