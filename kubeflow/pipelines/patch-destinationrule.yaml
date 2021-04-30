@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: ml-pipeline
+  namespace: kubeflow
+spec:
+  trafficPolicy:
+    tls:
+      mode: DISABLED
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: ml-pipeline-ui
+  namespace: kubeflow
+spec:
+  trafficPolicy:
+    tls:
+      mode: DISABLED
