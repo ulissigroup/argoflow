@@ -57,7 +57,7 @@ data:
       # If false, users can only select from the images in this config
       imagePullPolicy:
         # Supported values: Always, IfNotPresent, Never
-        value: IfNotPresent
+        value: Always
         readOnly: false
       cpu:
         # CPU for user's Notebook
@@ -100,7 +100,7 @@ data:
           accessModes:
             # The Access Mode of the Workspace Volume
             # Supported values: 'ReadWriteOnce', 'ReadWriteMany', 'ReadOnlyMany'
-            value: ReadWriteOnce
+            value: ReadWriteMany
           class:
             # The StrageClass the PVC will use if type is New. Special values are:
             # {none}: default StorageClass
@@ -153,8 +153,8 @@ data:
           vendors:
             - limitsKey: "nvidia.com/gpu"
               uiName: "NVIDIA"
-            - limitsKey: "amd.com/gpu"
-              uiName: "AMD"
+          #  - limitsKey: "amd.com/gpu"
+          #    uiName: "AMD"
           # Values: "" or a `limits-key` from the vendors list
           vendor: ""
         readOnly: false
