@@ -26,11 +26,13 @@ data:
         value: public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-scipy:master-1831e436
         # The list of available standard container Images
         options:
+          - ulissigroup/kubeflow:baselines
+          - ulissigroup/kubeflow_vasp:amptorch
           - public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-scipy:master-1831e436
           - public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-pytorch-full:master-1831e436
           - public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-pytorch-cuda-full:master-1831e436
-          - public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-tensorflow-full:master-1831e436
-          - public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-tensorflow-cuda-full:master-1831e436
+          #- public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-tensorflow-full:master-1831e436
+          #- public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-tensorflow-cuda-full:master-1831e436
       imageGroupOne:
         # The container Image for the user's Group One Server
         # The annotation `notebooks.kubeflow.org/http-rewrite-uri: /`
@@ -163,30 +165,41 @@ data:
         # value is a list of `configKey`s that we want to be selected by default
         value: ""
         # The list of available affinity configs
-        options: []
-        #options:
-        #  - configKey: "exclusive__n1-standard-2"
-        #    displayName: "Exclusive: n1-standard-2"
-        #    affinity:
-        #      # (Require) Node having label: `node_pool=notebook-n1-standard-2`
-        #      nodeAffinity:
-        #        requiredDuringSchedulingIgnoredDuringExecution:
-        #          nodeSelectorTerms:
-        #            - matchExpressions:
-        #                - key: "node_pool"
-        #                  operator: "In"
-        #                  values:
-        #                   - "notebook-n1-standard-2"
-        #      # (Require) Node WITHOUT existing Pod having label: `notebook-name`
-        #      podAntiAffinity:
-        #        requiredDuringSchedulingIgnoredDuringExecution:
-        #          - labelSelector:
-        #              matchExpressions:
-        #                - key: "notebook-name"
-        #                  operator: "Exists"
-        #            namespaces: []
-        #            topologyKey: "kubernetes.io/hostname"
-        #readOnly: false
+        options:
+          - configKey: "a6000"
+            displayName: "RTX-A6000"
+            affinity:
+              nodeAffinity:
+                requiredDuringSchedulingIgnoredDuringExecution:
+                  nodeSelectorTerms:
+                    - matchExpressions:
+                        - key: "nvidia.com/gpu.product"
+                          operator: "In"
+                          values:
+                            - RTX-A6000
+          - configKey: "2080"
+            displayName: "RTX-2080"
+            affinity:
+              nodeAffinity:
+                requiredDuringSchedulingIgnoredDuringExecution:
+                  nodeSelectorTerms:
+                    - matchExpressions:
+                        - key: "nvidia.com/gpu.product"
+                          operator: "In"
+                          values:
+                            - RTX-2080
+          - configKey: "titan"
+            displayName: "RTX-Titan"
+            affinity:
+              nodeAffinity:
+                requiredDuringSchedulingIgnoredDuringExecution:
+                  nodeSelectorTerms:
+                    - matchExpressions:
+                        - key: "nvidia.com/gpu.product"
+                          operator: "In"
+                          values:
+                            - RTX-Titan
+	readOnly: false
       tolerationGroup:
         # The default `groupKey` from the options list
         # If readonly, the default value will be the only option
