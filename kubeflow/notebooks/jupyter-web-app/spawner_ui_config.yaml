@@ -178,28 +178,6 @@ data:
                           operator: "In"
                           values:
                             - RTX-A6000
-          - configKey: "2080"
-            displayName: "RTX-2080"
-            affinity:
-              nodeAffinity:
-                requiredDuringSchedulingIgnoredDuringExecution:
-                  nodeSelectorTerms:
-                    - matchExpressions:
-                        - key: "nvidia.com/gpu.product"
-                          operator: "In"
-                          values:
-                            - RTX-2080
-          - configKey: "titan"
-            displayName: "RTX-Titan"
-            affinity:
-              nodeAffinity:
-                requiredDuringSchedulingIgnoredDuringExecution:
-                  nodeSelectorTerms:
-                    - matchExpressions:
-                        - key: "nvidia.com/gpu.product"
-                          operator: "In"
-                          values:
-                            - RTX-Titan
         #      # (Require) Node WITHOUT existing Pod having label: `notebook-name`
         #      podAntiAffinity:
         #        requiredDuringSchedulingIgnoredDuringExecution:
