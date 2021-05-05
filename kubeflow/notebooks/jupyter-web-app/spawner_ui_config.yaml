@@ -179,7 +179,7 @@ data:
                           values:
                             - RTX-A6000
           - configKey: "gpu"
-            displayName: "GPUs"
+            displayName: "GPU"
             affinity:
               nodeAffinity:
                 requiredDuringSchedulingIgnoredDuringExecution:
@@ -193,6 +193,7 @@ data:
                             - Titan-V
                             - GeForce-GTX-1080-Ti
           - configKey: "nogpu"
+            displayName: "no-GPU"
             affinity:
               nodeAffinity:
                 requiredDuringSchedulingIgnoredDuringExecution:
