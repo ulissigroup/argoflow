@@ -164,11 +164,11 @@ data:
       affinityConfig:
         # If readonly, the default value will be the only option
         # value is a list of `configKey`s that we want to be selected by default
-        value: ""
+        value: "nogpu"
         # The list of available affinity configs
         options:
           - configKey: "a6000"
-            displayName: "RTX-A6000"
+            displayName: "A6000"
             affinity:
               nodeAffinity:
                 requiredDuringSchedulingIgnoredDuringExecution:
@@ -178,6 +178,28 @@ data:
                           operator: "In"
                           values:
                             - RTX-A6000
+          - configKey: "gpu"
+            displayName: "GPUs"
+            affinity:
+              nodeAffinity:
+                requiredDuringSchedulingIgnoredDuringExecution:
+                  nodeSelectorTerms:
+                    - matchExpressions:
+                        - key: "nvidia.com/gpu.product"
+                          operator: "In"
+                          values:
+                            - GeForce-RTX-2080-Ti
+                            - Titan-RTX
+                            - Titan-V
+                            - GeForce-GTX-1080-Ti
+          - configKey: "nogpu"
+            affinity:
+              nodeAffinity:
+                requiredDuringSchedulingIgnoredDuringExecution:
+                  nodeSelectorTerms:
+                    - matchExpressions:
+                        - key: "nvidia.com/gpu.product"
+                          operator: "DoesNotExist"
         #      # (Require) Node WITHOUT existing Pod having label: `notebook-name`
         #      podAntiAffinity:
         #        requiredDuringSchedulingIgnoredDuringExecution:
