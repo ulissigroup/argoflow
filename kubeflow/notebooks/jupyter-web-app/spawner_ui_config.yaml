@@ -28,6 +28,7 @@ data:
         options:
           - ulissigroup/kubeflow:baselines
           - ulissigroup/kubeflow_vasp:amptorch
+          - ulissigroup/kubeflow:surface_drl
           - public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-scipy:master-1831e436
           - public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-pytorch-full:master-1831e436
           - public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-pytorch-cuda-full:master-1831e436
@@ -199,7 +200,16 @@ data:
                           operator: "In"
                           values:
                             - RTX-Titan
-	readOnly: false
+        #      # (Require) Node WITHOUT existing Pod having label: `notebook-name`
+        #      podAntiAffinity:
+        #        requiredDuringSchedulingIgnoredDuringExecution:
+        #          - labelSelector:
+        #              matchExpressions:
+        #                - key: "notebook-name"
+        #                  operator: "Exists"
+        #            namespaces: []
+        #            topologyKey: "kubernetes.io/hostname"
+        readOnly: false
       tolerationGroup:
         # The default `groupKey` from the options list
         # If readonly, the default value will be the only option
