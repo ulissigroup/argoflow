@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: 14.9.0
+    targetRevision: 15.4.6
     chart: kube-prometheus-stack
     helm:
      parameters:
@@ -18,7 +18,7 @@ spec:
       - name: grafana.ingress.tls[0].secretName
         value: grafana-example-com
       - name: grafana.ingress.tls[0].hosts[0]
-        value: grafana-example-com
+        value: grafana.example.com
       - name: grafana.persistence.type
         value: pvc
       - name: grafana.persistence.enabled
