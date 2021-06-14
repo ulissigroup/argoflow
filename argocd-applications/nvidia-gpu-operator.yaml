@@ -7,12 +7,10 @@ spec:
   project: default
   source:
     repoURL: https://nvidia.github.io/gpu-operator
-    targetRevision: 1.6.2
+    targetRevision: 1.7.1
     chart: gpu-operator
     helm:
-     parameters:
-      - name : operator.defaultRuntime
-        value : containerd
+     parameters: {}
   destination:
     server: https://kubernetes.default.svc
     namespace: default
