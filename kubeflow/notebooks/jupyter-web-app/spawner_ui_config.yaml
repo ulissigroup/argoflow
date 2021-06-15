@@ -125,9 +125,6 @@ data:
                 value: 'shared-datasets'
               mountpath:
                 value: /home/jovyan/shared-datasets/
-              accessModes: ReadWriteMany
-              class:
-                value: {none}
           - value:
               type:
                 value: Existing
@@ -135,9 +132,6 @@ data:
                 value: 'shared-scratch'
               mountpath:
                 value: /home/jovyan/shared-scratch/
-              accessModes: ReadOnlyMany
-              class:
-                value: {none}
         #       size:
         #         value: '10Gi'
         #       class:
