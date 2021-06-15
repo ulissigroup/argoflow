@@ -112,7 +112,7 @@ data:
         readOnly: false
       dataVolumes:
         # List of additional Data Volumes to be attached to the user's Notebook
-        value: []
+        #value: []
         # Each Data Volume is declared with the following attributes:
         # Type, Name, Size, MountPath and Access Mode
         #
