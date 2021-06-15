@@ -126,7 +126,7 @@ data:
               mountPath:
                 value: /home/jovyan/shared-datasets/
               size:
-                value: '10Gi'
+                value: '10000Gi'
               class:
                 value: '{none}'
               accessModes: 
@@ -139,11 +139,11 @@ data:
               mountPath:
                 value: /home/jovyan/shared-scratch/
               size:
-                value: '10Gi'
+                value: '10000Gi'
               class:
                 value: '{none}'
               accessModes: 
-                value: ReadOnlyMany
+                value: ReadWriteMany
         #       size:
         #         value: '10Gi'
         #       class:
