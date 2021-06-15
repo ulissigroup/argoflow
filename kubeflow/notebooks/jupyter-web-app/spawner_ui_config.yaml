@@ -123,15 +123,27 @@ data:
                 value: Existing
               name:
                 value: 'shared-datasets'
-              mountpath:
+              mountPath:
                 value: /home/jovyan/shared-datasets/
+              size:
+                value: '10Gi'
+              class:
+                value: '{none}'
+              accessModes: 
+                value: ReadOnlyMany
           - value:
               type:
                 value: Existing
               name:
                 value: 'shared-scratch'
-              mountpath:
+              mountPath:
                 value: /home/jovyan/shared-scratch/
+              size:
+                value: '10Gi'
+              class:
+                value: '{none}'
+              accessModes: 
+                value: ReadOnlyMany
         #       size:
         #         value: '10Gi'
         #       class:
