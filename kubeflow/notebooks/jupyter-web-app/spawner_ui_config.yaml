@@ -117,12 +117,27 @@ data:
         # Type, Name, Size, MountPath and Access Mode
         #
         # For example, a list with 2 Data Volumes:
-        # value:
-        #   - value:
-        #       type:
-        #         value: New
-        #       name:
-        #         value: '{notebook-name}-vol-1'
+        value:
+          - value:
+              type:
+                value: Existing
+              name:
+                value: 'shared-datasets'
+              mountpath:
+                value: /home/jovyan/shared-datasets/
+              accessModes: ReadWriteMany
+              class:
+                value: {none}
+          - value:
+              type:
+                value: Existing
+              name:
+                value: 'shared-scratch'
+              mountpath:
+                value: /home/jovyan/shared-scratch/
+              accessModes: ReadOnlyMany
+              class:
+                value: {none}
         #       size:
         #         value: '10Gi'
         #       class:
