@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pvcviewer-controller-controller-manager
+  namespace: kubeflow
+spec:
+  template:
+    spec:
+      containers:
+        - name: manager
+          resources:
+            limits:
+              memory: 200Mi
