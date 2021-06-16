@@ -67,14 +67,14 @@ data:
         value: '0.5'
         # Factor by with to multiply request to calculate limit
         # if no limit is set, to disable set "none"
-        limitFactor: "1.2"
+        limitFactor: "1"
         readOnly: false
       memory:
         # Memory for user's Notebook
         value: 1.0Gi
         # Factor by with to multiply request to calculate limit
         # if no limit is set, to disable set "none"
-        limitFactor: "1.2"
+        limitFactor: "1"
         readOnly: false
       environment:
         value: {}
@@ -112,17 +112,38 @@ data:
         readOnly: false
       dataVolumes:
         # List of additional Data Volumes to be attached to the user's Notebook
-        value: []
+        #value: []
         # Each Data Volume is declared with the following attributes:
         # Type, Name, Size, MountPath and Access Mode
         #
         # For example, a list with 2 Data Volumes:
-        # value:
-        #   - value:
-        #       type:
-        #         value: New
-        #       name:
-        #         value: '{notebook-name}-vol-1'
+        value:
+          - value:
+              type:
+                value: Existing
+              name:
+                value: 'shared-datasets'
+              mountPath:
+                value: /home/jovyan/shared-datasets/
+              size:
+                value: '10000Gi'
+              class:
+                value: '{none}'
+              accessModes: 
+                value: ReadOnlyMany
+          - value:
+              type:
+                value: Existing
+              name:
+                value: 'shared-scratch'
+              mountPath:
+                value: /home/jovyan/shared-scratch/
+              size:
+                value: '10000Gi'
+              class:
+                value: '{none}'
+              accessModes: 
+                value: ReadWriteMany
         #       size:
         #         value: '10Gi'
         #       class:
