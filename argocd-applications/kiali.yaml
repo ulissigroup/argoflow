@@ -38,9 +38,9 @@ spec:
       - name: cr.spec.deployment.override_ingress_yaml.spec.rules[0].http.paths[0].backend.servicePort
         value: "20001"
       - name: cr.spec.external_services.prometheus.url
-        value: http://kube-prometheus-stack-prometheus.monitoring:9090
+        value: http://rancher-monitoring-prometheus:9090
       - name: cr.spec.external_services.grafana.in_cluster_url
-        value: http://kube-prometheus-stack-grafana.monitoring:80
+        value: http://rancher-monitoring-grafana:80
       - name: cr.spec.external_services.grafana.dashboards[0].name
         value: "Istio Service Dashboard"
       - name: cr.spec.external_services.grafana.dashboards[0].variables.namespace
