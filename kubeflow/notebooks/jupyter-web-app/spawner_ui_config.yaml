@@ -199,6 +199,7 @@ data:
                           operator: "In"
                           values:
                             - RTX-A6000
+                            - NVIDIA-RTX-A6000
           - configKey: "gpu"
             displayName: "GPU"
             affinity:
@@ -211,7 +212,9 @@ data:
                           values:
                             - GeForce-RTX-2080-Ti
                             - Titan-RTX
+                            - NVIDIA-TITAN-RTX
                             - Titan-V
+                            - NVIDIA-TITAN-V
                             - GeForce-GTX-1080-Ti
           - configKey: "nogpu"
             displayName: "no-GPU"
