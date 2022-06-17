@@ -210,12 +210,9 @@ data:
                         - key: "nvidia.com/gpu.product"
                           operator: "In"
                           values:
-                            - GeForce-RTX-2080-Ti
-                            - Titan-RTX
-                            - NVIDIA-TITAN-RTX
-                            - Titan-V
-                            - NVIDIA-TITAN-V
-                            - GeForce-GTX-1080-Ti
+                            - NVIDIA-GeForce-RTX-2080-Ti
+                            - NVIDIA-Titan-RTX
+                            - NVIDIA-Titan-V
           - configKey: "nogpu"
             displayName: "no-GPU"
             affinity:
