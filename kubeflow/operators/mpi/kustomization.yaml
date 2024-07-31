@@ -7,5 +7,5 @@ resources:
 images:
 - name: mpioperator/mpi-operator
   newName: mpioperator/mpi-operator
-  newTag: latest
-  # digest: sha256:547b161ee16991a49aca90cd2b1048a2d3dbc4af42f4b9d5947a4b76c618dad4
+  newTag: v0.2.3
+  # digest: sha256:ebc25d50187d03d028004b7b7728959f03b23f4235f0e2af097640f2b7aa58c4 
