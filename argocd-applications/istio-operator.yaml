@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/istio/istio'
     targetRevision: HEAD
-    path: manifests/charts/operator
+    path: operator
     helm:
       parameters:
       - name: hub
