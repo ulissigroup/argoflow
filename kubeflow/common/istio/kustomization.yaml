@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - github.com/kubeflow/manifests/common/istio-1-22/istio-namespace/base
 - github.com/kubeflow/manifests/common/istio-1-22/istio-crds/base
-- github.com/kubeflow/manifests/common/istio-1-22/istio-install
+- http://github.com/kubeflow/manifests/common/istio-1-22/istio-install
 - github.com/kubeflow/manifests/common/istio-1-22/cluster-local-gateway/base
 - github.com/kubeflow/manifests/common/istio-1-22/kubeflow-istio-resources/base
 - ingress-certificate.yaml
