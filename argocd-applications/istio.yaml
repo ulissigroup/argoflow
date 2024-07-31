@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     path: kubeflow/common/istio
     kustomize:
-      version: v5.4.3
+      version: v4.0.5
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
