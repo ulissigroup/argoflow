@@ -12,7 +12,7 @@ resources:
 # to use upstream istio comment out line above
 # and uncomment the next two line
 # - argocd-applications/istio-upstream.yaml
-# - argocd-applications/istio-operator.yaml
+ - argocd-applications/istio-operator.yaml
 # kubeflow
 - argocd-applications/kubeflow-roles-namespaces.yaml
 - argocd-applications/cert-manager.yaml
