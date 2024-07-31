@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
 spec:
   project: default
+  profile: minimal
   source:
     repoURL: 'https://github.com/istio/istio'
     targetRevision: HEAD
