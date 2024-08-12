@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
 #- https://github.com/kubeflow/kfserving-lts/tree/v0.5.0-rc0/config/overlays/kubeflow
-- https://github.com/checomp/kfserving-lts/tree/release-0.6/config/overlays/kubeflow
+- https://github.com/checomp/kfserving-lts/tree/v0.5.0-rc0/config/overlays/kubeflow 
 
 images:
 - name: kfserving/kfserving-controller
