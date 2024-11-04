@@ -5,8 +5,8 @@ resources:
 - github.com/checomp/manifests/common/istio-1-9/istio-namespace/base
 - github.com/checomp/manifests/common/istio-1-9/istio-crds/base
 - github.com/checomp/manifests/common/istio-1-9/istio-install/base
-- github.com/kubeflow/checomp/common/istio-1-9/cluster-local-gateway/base
-- github.com/kubeflow/checomp/common/istio-1-9/kubeflow-istio-resources/base
+- github.com/checomp/manifests/common/istio-1-9/cluster-local-gateway/base
+- github.com/checomp/manifests/common/istio-1-9/kubeflow-istio-resources/base
 - ingress-certificate.yaml
 
 patchesStrategicMerge:
