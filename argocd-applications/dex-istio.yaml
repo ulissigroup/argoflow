@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:checomp/laikapack_dex.git
+    repoURL: git@github.com:checomp/laikapack_dex.git # adding comment to force update
     targetRevision: HEAD
     path: dex-istio
     kustomize:
