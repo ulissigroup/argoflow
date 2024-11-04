@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/checomp/laikapack_dex.git
+    repoURL: git@github.com:checomp/laikapack_dex.git
     targetRevision: HEAD
     path: dex-istio
     kustomize:
