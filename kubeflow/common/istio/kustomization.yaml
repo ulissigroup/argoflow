@@ -23,4 +23,3 @@ images:
   newName: docker.io/istio/pilot
   newTag: 1.9.5
   # digest: sha256:e8166f78ba0f153814a259b07fa60f8c96ef602cf1f87b75789cd5202306dfe3
-
