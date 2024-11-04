@@ -2,11 +2,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/kubeflow/manifests/common/istio-1-22/istio-namespace/base
-- github.com/kubeflow/manifests/common/istio-1-22/istio-crds/base
-- http://github.com/kubeflow/manifests/common/istio-1-22/istio-install
-- github.com/kubeflow/manifests/common/istio-1-22/cluster-local-gateway/base
-- github.com/kubeflow/manifests/common/istio-1-22/kubeflow-istio-resources/base
+- github.com/checomp/manifests/common/istio-1-9/istio-namespace/base
+- github.com/checomp/manifests/common/istio-1-9/istio-crds/base
+- github.com/checomp/manifests/common/istio-1-9/istio-install
+- github.com/kubeflow/checomp/common/istio-1-9/cluster-local-gateway/base
+- github.com/kubeflow/checomp/common/istio-1-9/kubeflow-istio-resources/base
 - ingress-certificate.yaml
 
 patchesStrategicMerge:
@@ -23,3 +23,4 @@ images:
   newName: docker.io/istio/pilot
   newTag: 1.22.0
   # digest: sha256:e8166f78ba0f153814a259b07fa60f8c96ef602cf1f87b75789cd5202306dfe3
+
