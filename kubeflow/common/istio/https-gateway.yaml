@@ -7,7 +7,7 @@ spec:
     istio: ingressgateway
   servers:
   - hosts:
-    - 'laikapack-head.cheme.cmu.edu'
+    - '*'
     port:
       name: http
       number: 80
@@ -16,7 +16,7 @@ spec:
     tls:
       httpsRedirect: true
   - hosts:
-    - 'laikapack-head.cheme.cmu.edu'
+    - '*'
     port:
       name: https
       number: 443
