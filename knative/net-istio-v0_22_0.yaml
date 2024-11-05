@@ -92,7 +92,7 @@ spec:
     istio: ingressgateway
   servers:
   - port:
-      number: 8082
+      number: 8081
       name: http
       protocol: HTTP
     hosts:
@@ -523,4 +523,5 @@ spec:
   selector:
     app: istio-webhook
 ---
+
 
