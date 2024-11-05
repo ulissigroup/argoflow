@@ -10,7 +10,7 @@ resources:
 - ingress-certificate.yaml
 
 patchesStrategicMerge:
-#- gateway-service.yaml
+- gateway-service.yaml
 - sidecar-configmap-patch.yaml
 - https-gateway.yaml
 
