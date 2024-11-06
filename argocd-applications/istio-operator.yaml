@@ -11,7 +11,7 @@ spec:
     helm:
       parameters:
       - name: hub
-        value: docker.io/istio
+        value: gcr.io/istio-release
       - name: tag
         value: 1.9.6
   destination:
