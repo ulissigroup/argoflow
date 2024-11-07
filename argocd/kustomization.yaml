@@ -4,7 +4,7 @@ namespace: argocd
 
 resources:
 - namespace.yaml
-- github.com/checomp/argo-cd/manifests/ha/cluster-install # tag=v2.1.16 and I pushed the 2.1.16 tag to be the master branch
+- github.com/argoproj/argo-cd/manifests/ha/cluster-install?ref=90375f0fef5e96e285accd8a20ef19417162b3fa # tag=v2.1.16
 
 #- github.com/argoproj/argo-cd/manifests/ha/cluster-install?ref=33eaf11e3abd8c761c726e815cbb4b6af7dcb030 # tag=v2.0.1
 
