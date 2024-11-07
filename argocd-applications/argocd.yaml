@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com/ulissigroup/argoflow.git
+    repoURL: git@github.com:ulissigroup/argoflow.git
     targetRevision: HEAD
     path: argocd
     kustomize:
