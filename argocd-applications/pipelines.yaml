@@ -6,11 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:ulissigroup/argoflow.git #adding throw away comment to force sync
+    repoURL: git@github.com:ulissigroup/argoflow.git
     targetRevision: HEAD
     path: kubeflow/pipelines
     kustomize:
-      version: v4.0.5
+      version: v4.2.0
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
